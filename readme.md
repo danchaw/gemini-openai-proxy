@@ -154,3 +154,6 @@ docker run -d -p 8000:8000 ghcr.io/zuisong/gemini-openai-proxy:node
     <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zuisong/gemini-openai-proxy&type=Date" />
   </picture>
 </a>
+
+---
+[<img src="https://api.gitsponsors.com/api/badge/img?id=738821930" height="20">](https://api.gitsponsors.com/api/badge/link?p=FAEAbbZ98F8jvNl7jgWINDvYnARywZk16J74jYW1wi6xT0EqtYge+R5clltcdw4HYrhBVqfPw4Lj4pzYRVe1veathcq73gxUVEnIwzL4RFcfI6g3Q32h6z9LozrjBl7e)
