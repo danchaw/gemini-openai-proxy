@@ -1,11 +1,12 @@
 import type { BatchEmbedContentsRequest } from "../gemini-api-client/gemini-api-client.ts"
 import { batchEmbedContents } from "../gemini-api-client/gemini-api-client.ts"
+import { Any } from "../log.ts";
 import type { OpenAI } from "../types.ts"
 import { GeminiModel, getToken } from "../utils.ts"
 
 //https://ai.google.dev/gemini-api/docs/embeddings#javascript_1
 //https://ai.google.dev/gemini-api/docs/embeddings#control-embedding-size
-const GEMINI_EMBEDDING_MODEL = "text-embedding-004"
+const GEMINI_EMBEDDING_MODEL = "gemini-embedding-001"
 //"embedding-001"
 //"gemini-embedding-001"
 const GEMINI_EMBEDDING_MODEL_OUTPUT_DIM = 768
@@ -65,7 +66,7 @@ export async function embeddingProxyHandler(rawReq: Request): Promise<Response> 
 
     const finalResponse: OpenAI.Embeddings.CreateEmbeddingResponse = {
       object: "list",
-      data: responseData,
+      data: responseData as Any,
       model: req.model,
       usage: {
         prompt_tokens: 0, // Note: You would need to implement token counting separately
